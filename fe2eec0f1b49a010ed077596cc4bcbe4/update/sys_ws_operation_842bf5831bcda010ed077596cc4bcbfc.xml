@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>PUT</http_method>
+        <name>verify</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    var code = request.queryParams.code;
+
+    var grEmail = new GlideRecord('x_364985_email_ver_verification');
+    grEmail.addQuery('verification_code', code);
+    grEmail.query();
+    if (grEmail.next()) {
+        var status = grEmail.getValue('status');
+        if (status == '10') {
+            grEmail.setValue('status', '20');
+            var date = new GlideDate();
+            grEmail.verification_date.setValue(date);
+            grEmail.update();
+
+            response.setStatus(200);
+
+        }
+        if (status == '20') {
+            var errorAlreadyUsed = new sn_ws_err.ServiceError();
+            errorAlreadyUsed.setStatus(404);
+            errorAlreadyUsed.setMessage("Code already used");
+            errorAlreadyUsed.setDetail("This code has already been used to verify the email");
+            response.setError(errorAlreadyUsed);
+            response.setStatus(404);
+        }
+
+    } else {
+        var errorNotFound = new sn_ws_err.ServiceError();
+        errorNotFound.setStatus(401);
+        errorNotFound.setMessage("Verification code not found");
+        errorNotFound.setDetail("This code was not found in our system");
+        response.setError(errorNotFound);
+        response.setStatus(401);
+    }
+    response.setContentType('application/json');
+    var writer = response.getStreamWriter();
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_364985_email_ver/verify_email</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:03:44</sys_created_on>
+        <sys_id>842bf5831bcda010ed077596cc4bcbfc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>verify</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_update_name>sys_ws_operation_842bf5831bcda010ed077596cc4bcbfc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 14:02:32</sys_updated_on>
+        <web_service_definition display_value="Verify Email">08aafd431bcda010ed077596cc4bcb3c</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

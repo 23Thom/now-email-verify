@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Email Verification" max_length="40" name="x_364985_email_ver_verification" sizeclass="0" type="collection">
+        <element label="Email" max_length="120" name="email" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="1" default="10" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="10" value="10"/>
+                <element inactive_on_update="false" label="Verified" sequence="20" value="20"/>
+            </choice>
+        </element>
+        <element label="Verification Code" max_length="40" name="verification_code" read_only="true" type="string"/>
+        <element label="Verification Date" max_length="40" name="verification_date" read_only="true" type="glide_date"/>
+    </element>
+</database>

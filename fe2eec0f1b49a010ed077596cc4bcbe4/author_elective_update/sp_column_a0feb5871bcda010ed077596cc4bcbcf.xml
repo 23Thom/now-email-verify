@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <size/>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">e8feb5871bcda010ed077596cc4bcbcc</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:19:57</sys_created_on>
+        <sys_id>a0feb5871bcda010ed077596cc4bcbcf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_update_name>sp_column_a0feb5871bcda010ed077596cc4bcbcf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 13:19:57</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</application>
+        <file_path/>
+        <instance_id>e24fe9e5dbcbf380f492c597059619c1</instance_id>
+        <instance_name>dev90529</instance_name>
+        <name>sp_column_a0feb5871bcda010ed077596cc4bcbcf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>1</order><size/><size_lg/><size_sm/><size_xs/><sp_row display_value="1">e8feb5871bcda010ed077596cc4bcbcc</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-17 13:19:57</sys_created_on><sys_id>a0feb5871bcda010ed077596cc4bcbcf</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package><sys_policy/><sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope><sys_update_name>sp_column_a0feb5871bcda010ed077596cc4bcbcf</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-17 13:19:57</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-414307070</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>fa2eec0f1b49a010ed077596cc4bcbe6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:19:57</sys_created_on>
+        <sys_id>e0feb5871bcda010ed077596cc4bcbd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17670db6fdf0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 13:19:57</sys_updated_on>
+        <type>Column</type>
+        <update_guid>2cfeb587eccda010847daa95f68d5bd0</update_guid>
+        <update_guid_history>2cfeb587eccda010847daa95f68d5bd0:-414307070</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">1e0a92c31b41e010ed077596cc4bcb17</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 15:18:18</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>753229dba64f47a296d7a6f3720bee44</sys_id>
+        <sys_metadata>a0feb5871bcda010ed077596cc4bcbcf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_scope_delete display_value="">1651b4e561a840b0846ff2fcc432a900</sys_scope_delete>
+        <sys_update_name>sp_column_a0feb5871bcda010ed077596cc4bcbcf</sys_update_name>
+        <sys_update_version display_value="sp_column_a0feb5871bcda010ed077596cc4bcbcf">e0feb5871bcda010ed077596cc4bcbd1</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 15:18:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

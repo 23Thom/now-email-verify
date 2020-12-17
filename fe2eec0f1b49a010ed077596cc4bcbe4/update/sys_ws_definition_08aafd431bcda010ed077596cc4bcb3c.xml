@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_364985_email_ver/verify_email</base_uri>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl/>
+        <is_versioned>false</is_versioned>
+        <name>Verify Email</name>
+        <namespace>x_364985_email_ver</namespace>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <service_id>verify_email</service_id>
+        <short_description/>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:01:43</sys_created_on>
+        <sys_id>08aafd431bcda010ed077596cc4bcb3c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Verify Email</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_update_name>sys_ws_definition_08aafd431bcda010ed077596cc4bcb3c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 13:01:57</sys_updated_on>
+    </sys_ws_definition>
+</record_update>
