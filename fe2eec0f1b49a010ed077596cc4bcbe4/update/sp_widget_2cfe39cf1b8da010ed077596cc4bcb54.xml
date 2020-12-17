@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function(spUtil, $location) {
+
+  var c = this;
+	c.data.disableSubmit = false;
+
+	var urlCode = $location.search().code;
+
+	c.submit = function() {
+		c.data.action = 'verify'
+		c.server.update().then(function(response){
+			c.data.status = response.status;
+			c.data.action = '';
+			if(c.data.status == 'success'){
+				c.data.disableSubmit = true;
+			}else if(c.data.status == 'notFound'){
+				spUtil.addErrorMessage('Verification code could not be found!');
+			}else if(c.data.status == 'alreadyUsed'){
+				spUtil.addErrorMessage('This Verification code has already been used!');
+			}else{
+				spUtil.addErrorMessage('Sorry, something went wrong!');
+			}
+			
+		});	
+	}
+
+// check if a code is send via the URL
+		if (urlCode){
+		c.data.code = urlCode;
+		c.submit();
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#verify {
+  margin: 2px;
+  text-align: center;
+}
+.title {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+.verify-text{
+  padding-top: 15px;
+  text-align: center;
+}
+.form-inline {
+  padding-top: 20px;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>email_verify</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Email Verify</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	function makeRestCall(code){
+		var request = new sn_ws.RESTMessageV2();
+		request.setEndpoint(gs.getProperty('glide.servlet.uri') +'/api/x_364985_email_ver/verify_email?code='+code);
+		request.setHttpMethod('PUT');
+		request.setRequestHeader("Accept", "application/json");
+		var response = request.execute();
+		var responseCode = response.getStatusCode();
+		console.log(responseCode);
+		if (responseCode == 200){
+			data.status = 'success';
+		}else if(responseCode == 401){
+			data.status = 'notFound';
+		}else if(responseCode == 404){
+			data.status = 'alreadyUsed';
+		}else{
+			data.status = 'failure';
+		}
+
+	}
+	if (input && input.action == 'verify' && input.code) {
+		makeRestCall(input.code);
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:19:57</sys_created_on>
+        <sys_id>2cfe39cf1b8da010ed077596cc4bcb54</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Email Verify</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_update_name>sp_widget_2cfe39cf1b8da010ed077596cc4bcb54</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 14:37:24</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading pad-bottom">
+    <div class='title'>
+      <h4> E-Mail Validation</h4>
+    </div>
+  </div>
+  <div class='verify-text'>
+    You have been notified to validate your e-mail address.
+    <br>
+    To validate the e-mail address, please enter the confirmation code you received by e-mail in the following field and click on "Verify" button.
+    <br>
+    Thank you for confirming your e-mail address
+
+  </div>
+  <div id="verify">		
+    <form class="form-inline">
+      <div class="form-group" ng-if='c.data.status!="success"'>
+        <input type='text' class='form-control' ng-model="c.data.code" id="code" name="code" placeholder='Enter verification code' />
+        <button type='button' ng-disabled="c.data.disableSubmit" class='btn btn-primary' ng-click="c.submit()">${Verify}</button>
+      </div>
+      <div ng-if='c.data.status=="success"' class="alert alert-success">
+        <strong>Success! Your email address has been validated!</strong>
+      </div>
+    </form>	
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
+    <sp_page action="DELETE">
+        <category>custom</category>
+        <css/>
+        <draft>false</draft>
+        <dynamic_title_structure/>
+        <id>email_verify</id>
+        <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
+        <public>false</public>
+        <roles/>
+        <seo_script/>
+        <short_description/>
+        <sys_class_name>sp_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:19:57</sys_created_on>
+        <sys_id>68feb5871bcda010ed077596cc4bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>email_verify</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_update_name>sp_page_68feb5871bcda010ed077596cc4bcbc6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 13:19:57</sys_updated_on>
+        <title>Email Verify - Test Page</title>
+        <use_seo_script>false</use_seo_script>
+    </sp_page>
+    <sys_translated_text action="DELETE" query="documentkey=68feb5871bcda010ed077596cc4bcbc6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</application>
+        <file_path/>
+        <instance_id>e24fe9e5dbcbf380f492c597059619c1</instance_id>
+        <instance_name>dev90529</instance_name>
+        <name>sp_page_68feb5871bcda010ed077596cc4bcbc6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page"><sp_page action="INSERT_OR_UPDATE"><category>custom</category><css/><draft>false</draft><dynamic_title_structure/><id>email_verify</id><internal>false</internal><omit_watcher>false</omit_watcher><public>false</public><roles/><seo_script/><short_description/><sys_class_name>sp_page</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-12-17 13:19:57</sys_created_on><sys_id>68feb5871bcda010ed077596cc4bcbc6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>email_verify</sys_name><sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package><sys_policy/><sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope><sys_update_name>sp_page_68feb5871bcda010ed077596cc4bcbc6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-12-17 13:19:57</sys_updated_on><title>Email Verify - Test Page</title><use_seo_script>false</use_seo_script></sp_page><sys_translated_text action="delete_multiple" query="documentkey=68feb5871bcda010ed077596cc4bcbc6"/></record_update>]]></payload>
+        <payload_hash>-1210061220</payload_hash>
+        <record_name>email_verify</record_name>
+        <reverted_from/>
+        <source>fa2eec0f1b49a010ed077596cc4bcbe6</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 13:19:57</sys_created_on>
+        <sys_id>28feb5871bcda010ed077596cc4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17670db6f170000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 13:19:57</sys_updated_on>
+        <type>Page</type>
+        <update_guid>60feb58722cda010442255d38cbbcfc9</update_guid>
+        <update_guid_history>60feb58722cda010442255d38cbbcfc9:-1210061220</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="email_verify">5e0a92c31b41e010ed077596cc4bcb21</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-17 15:18:19</sys_created_on>
+        <sys_db_object display_value="" name="sp_page">sp_page</sys_db_object>
+        <sys_id>052967343efb4842bb7e5e6755767d64</sys_id>
+        <sys_metadata>68feb5871bcda010ed077596cc4bcbc6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>email_verify</sys_name>
+        <sys_package display_value="Email Verifier" source="x_364985_email_ver">fe2eec0f1b49a010ed077596cc4bcbe4</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Email Verifier">fe2eec0f1b49a010ed077596cc4bcbe4</sys_scope>
+        <sys_scope_delete display_value="">1651b4e561a840b0846ff2fcc432a900</sys_scope_delete>
+        <sys_update_name>sp_page_68feb5871bcda010ed077596cc4bcbc6</sys_update_name>
+        <sys_update_version display_value="sp_page_68feb5871bcda010ed077596cc4bcbc6">28feb5871bcda010ed077596cc4bcbc9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-17 15:18:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
