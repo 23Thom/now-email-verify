@@ -1,6 +1,6 @@
-# now-email-verify
+# ServiceNow Email Verifier
 
-This is a small app for Email validation. 
+This is a small ServiceNow app for email validation. 
 
 * The app includes a table, which stores all the information regarding the validation.
 * Business rule to create the validation code.
